@@ -1,10 +1,6 @@
-#include <stdlib.h>                                                                                                                     
-#include <time.h>                                                                                                                       
-#include <stdio.h>                                                                                                                      
-/** 
+#include <stdlib.h>                                              #include <time.h>                                                #include <stdio.h>                                               /**
  * main -> assign a random number to the variable n each time it is excuted.
- * and prints out based on a condition                                                                                                  
- * Return: Always 0(sucess)                                                                                                      
+ * and prints out based on a condition                            * Return: Always 0(sucess)                                      
  */
 int main(void)
 {
@@ -16,5 +12,4 @@ if (n == 0)
 printf("%d is zero\n", n);
 if (n < 0)
 printf("%d is negative\n", n);
-return (0);                                                                                                                     
-}
+return (0);                                                      }
