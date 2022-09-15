@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * main -> assign a random number to the variable n each time it is excuted.
- * and prints out based on a condition 
- * return: Always 0(sucess) 
+ * main -> prints the alphabet in lowercase, followed by a new line.
+ * Return: Always 0(sucess) 
  */
 int main(void)
 {
