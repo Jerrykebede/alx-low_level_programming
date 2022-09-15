@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - rints all possible combinations of three different digits in ascending order, separated by a comma followed by a space.
+ * main - rints all possible combinations of three different digits
+ * in ascendig order, separated by a comma followed by a space.*
  * Return: Always 0 (sucess)
  */
 int main(void)
