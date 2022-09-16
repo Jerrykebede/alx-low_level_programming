@@ -19,6 +19,7 @@ for (row = 1; row <= size; row++)
 for (columns = 1; columns <= size - row; columns++)
 {
 _putchar(' ');
+}
 for (hash = 1; hash <= row; hash++)
 {
 _putchar('#');
@@ -28,6 +29,5 @@ continue;
 _putchar('\n');
 }
 _putchar('\n');
-}
 }
 }
