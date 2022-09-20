@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- *_puts - prints a string 
- *@str: string to point
- *
- *Description: prints a string
- *onsuccess: returns no error
- */
+*_puts - prints a string 
+*@str: string to point
+*
+*Description: prints a string
+*onsuccess: returns no error
+*/
 
 void _puts(char *str)
 {
