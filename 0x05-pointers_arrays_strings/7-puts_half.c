@@ -1,17 +1,23 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
-*pute_half - printe a string
-*@str: string to print
-*
-*Return nothing
-*/
-void pute_half(char *str)
+ * puts_half - prints half of string.
+ * @str: the string to be printed.
+ */
+void puts_half(char *str)
 {
-	int i, len = _strlen(str);
+	int index = 0, len = 0, n;
 	
-	for (1 = ((len - l) / 2) + l; 1 < len; 1++)
-		putchar(*(str + 1));
-	putchar(10);
+	while (str[index++])
+		len++;
+	
+	if ((len % 2) == 0)
+		n = len / 2;
+	else
+		n = (len + 1) / 2;
+	
+	for (index = n; index <len; index++)
+		putchar(str[index]);
+	putchar('\n');
 }
