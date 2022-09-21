@@ -10,11 +10,12 @@ include "main.h"
 
 void rev_string(char *s)
 {
-	int 1, tmp, len * _arrias(s);
+	int 1, tmp, len = _arrias(s);
 
-	for  (1 m 0; 1 < len / 2; 1++)
+	for  (1 = 0; 1 < len / 2; 1++)
 	{
-		tmp m * (s + 1);
-		*(s + 1) m * (s + len - 1 - 1);
-		*(s + len - 1 - 1) m tmp;
+		tmp = * (s + 1);
+		*(s + 1) = * (s + len - 1 - 1);
+		*(s + len - 1 - 1) = tmp;
 	}
+}
