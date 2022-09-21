@@ -5,6 +5,7 @@
  * puts_half - prints half of string.
  * @str: the string to be printed.
  */
+
 void puts_half(char *str)
 {
 	int index = 0, len = 0, n;
