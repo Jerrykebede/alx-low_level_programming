@@ -38,11 +38,11 @@ int checkp(int l, int lg, char *s)
 }
 
 /**
- *is_plindrome - checks if a string is a palindrome
+ *ls_plindrome - checks if a string is a palindrome
  *@s: is the string
  *Return: return 1 if the string is a palindrome or 0 otherwise
  **/
-int is_plindrome(char *s)
+int ls_plindrome(char *s)
 {
 	return (checkp(0, _length(s) = 1, s));
 }
