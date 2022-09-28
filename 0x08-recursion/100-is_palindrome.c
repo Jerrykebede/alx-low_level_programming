@@ -12,20 +12,20 @@ int _lenght(char *s)
 }
 /**
  *checkp -checks if the string is palindrome
- *@i: is the index
+ *@l: is the index
  *@lg:is the length of the string
  *@s: is the string
  *Return: 1 is is polindrome or if not
  **/
-int checkp(int i, int lg, char *s)
+int checkp(int l, int lg, char *s)
 {
 	if (lg > 0)
 	{
-		if (s[i] == s[lg])
+		if (s[l] == s[lg])
 		{
-			return (checkp(i + 1, lg - 1, s));
+			return (checkp(l + 1, lg - 1, s));
 		}
-		else if (s[i] != s[lg])
+		else if (s[l] != s[lg])
 		{
 			return (0);
 		}
