@@ -1,55 +1,48 @@
-#include "main.h"
-
-int check_palindrome(char *s);
-
-/**
- *is_palindrome - Returns if a string is palindrome
- *@s: the string value to be checked 
- *
- *Return: integer value
- */
-int is_palindrome(char *)
+#include "main.h"        
+/** 
+*_lenght - checks the lenght of a string
+*@s: is the string
+*Return: return the leng of the string
+*/  
+int _lenght(char *s)
 {
-	if (*s == '0')
-		return (1);
-	return (check_palindrome(s));
-}
-
-/**
- *check_palindrome - check if a string is palindrome
- *@s: the string value to be checked 
- *
- *Return: integer value
- */
-int check_palindrome(char *s)
-{
-	int l = _strlen_recursion(s) - 1;
-
-	if (*s == s[l])
-	{
-		s++;
-		l--;
-	}
-	else
-	{
+	if (*s == '\0')
 		return (0);
+	return (1 + _lenght(s + 1));
+}
+/**
+*checkp - checks if the string is palindrome
+*@i: is the index
+*@lg:is the lenght of the string
+*@s: is the string
+*Return: 1 is is palindrome or 0 if not
+ **/ 
+int checkp(int i, int lg, char *s)
+{
+	if (lg > 0)
+	{
+		if (s[i] == s[lg])
+		{
+			return (checkp(i + 1, lg - 1, s));
+		}
+		if (s[i] != s[lg])
+		{
+			return (0);
+		}
+		else
+		{
+			return (1);
+		}
 	}
 	return (1);
 }
 
-/**
- *_strlen_recursion -get the length of a strin
- *@s: the string to get the length
- *
- *Return: the sring length
- */
-int _strlen_restursion(char *s)
+/** 
+*is_palindrome - checks if a string is a palindrome
+*@s: is the string
+*Return: return 1 if the string is a palindrome or 0 otherwise 
+**/ 
+int is_palindrome(char *s)
 {
-	if (*s == '\0')
-	{
-		return (0);
-	}
-
-	s++;
-	return (_strlen_restursion(s) +1);
+	return (checkp(0, _lenght(s) - 1, s));
 }
