@@ -44,5 +44,5 @@ int checkp(int i, int lg, char *s)
  **/
 int is_plindrome(char *s)
 {
-	return (checkp(0, _length(s) = 1, s));
+	return (checkp(0, _length(s) - 1, s));
 }
