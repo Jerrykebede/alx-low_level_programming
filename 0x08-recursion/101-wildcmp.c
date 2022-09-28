@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *wildcmp - compares two strings.
  *
@@ -8,6 +9,7 @@
  *
  *Return: 1 if are identical, 0 if not.
  */
+
 int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
