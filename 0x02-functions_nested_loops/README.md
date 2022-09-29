@@ -1,1 +1,1 @@
-0x02-functions_nested_loops alltask done by eyerusalem
+0x02. C - Functions, nested loops i alltask done by eyerusalem
