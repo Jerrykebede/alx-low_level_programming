@@ -8,13 +8,13 @@
 int main(void)
 {
 	char password[48];
-	int indec = 0, sum = 0, diff_half1, diff_half2;
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
 	srand(time(0));
 
 	while (sum < 2772)
 	{
-		password[index] = 33 + rand() % 94;
+		password[index] = 33 + rand () % 94;
 		sum += password[index++];
 	}
 	
@@ -31,7 +31,7 @@ int main(void)
 		{
 			if (password[index] >= (33 + diff_half1))
 			{
-				password[index] - = diff_half1;
+				password[index] -= diff_half1;
 				break;
 			}
 		}
@@ -48,4 +48,3 @@ int main(void)
 	printf("%s", password);
 	return (0);
 }
-
