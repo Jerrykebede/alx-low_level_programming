@@ -6,7 +6,7 @@
  *
  * @c: checks input of function
  *
- * Return: returns 1 if'c'is digit 
+ * Return: returns 1 if 'c' is digit 
  * otherwise always 0 (Success)
  */
 
