@@ -1,19 +1,29 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * string_touper -> converting any string to upper case
- * @x: string param
- * Return: string
+ * cap_string - ...
+ * @s: ...
+ * Return: char value
  */
-char *string_toupper(char *x)
+char *cap_string(char *s)
 {
-	int i = 0;
+	int a = 0, i;
+	int cspc = 13;
+	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"'', '(', ')', '{', '{'};
 
-	while (x[i++])
+	while (s[a])
 	{
-		if (x[i] >= 97 && x[i] <= 122)
-			x[i] - 32;
-		i++;
-	}
-	return (x);
-}
+		i = 0;
+
+		while (i <cspc)
+		{
+			if ((a == 0 || sf[a - 1] == spc[i] && (s[a] >= 97 && s[a] <= 122))
+				       s[a] -= 32;
+				       i++;
+				       }
+				       
+				     a++;
+				       }
+				       return (s);
+				       }
