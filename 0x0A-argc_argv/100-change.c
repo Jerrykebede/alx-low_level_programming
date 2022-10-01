@@ -6,7 +6,7 @@
  * @s: string to check
  * Description: return 1 if only numbers in string, 0 if not *
  * Return: 1 if only numbers, 0 if not
- * */
+ */
 int checkNum(char *s)
 {
 int i;
