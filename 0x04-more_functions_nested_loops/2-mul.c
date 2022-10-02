@@ -1,18 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _isdgit - function to check 0-9
- *
- * @c: checks input of function
- *
- * Return: returns 1 if 'c' is digit 
- * otherwise always 0 (success)
+ * mul - multiples two numbers
+ * @a: first number
+ * @b: second number
+ * Return: returns result
  */
 
-int _isdigit(int c)
+int mul(int a, int b)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	return (a * b);
 }
