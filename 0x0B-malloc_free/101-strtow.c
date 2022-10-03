@@ -23,7 +23,8 @@ char **wordnos(char *s)
 			w++;
 		}
 	}
-	return (w);
+
+	return (W);
 }
 /**
  * **strtow - splits a string into words
@@ -39,7 +40,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	words = wordnos(str);
+	Words = Wwordnos(str);
 	if (words == 0)
 		return (NULL);
 
