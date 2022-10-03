@@ -24,7 +24,7 @@ char **wordnos(char *s)
 		}
 	}
 
-	return (W);
+	return (w);
 }
 
 /**
@@ -41,7 +41,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	Words = Wordnos(str);
+	words = wordnos(str);
 	if (words == 0)
 		return (NULL);
 
