@@ -40,7 +40,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	Words = Wwordnos(str);
+	Words = Wordnos(str);
 	if (words == 0)
 		return (NULL);
 
