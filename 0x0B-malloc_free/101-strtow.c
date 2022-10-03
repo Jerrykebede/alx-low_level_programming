@@ -28,14 +28,14 @@ char **wordnos(char *s)
 }
 
 /**
- * **strtow - splits a string into words
+ * strtow - splits a string into words
  * @str: string to split 
  *
  * Return: pointer to an array of strings (success)
  * or NULL (Error)
  */
 char **strtow(char *str)
-i{
+{
 	char **matrix, *tmp;
 	int i, k = 0, len = 0, words, c = 0, start, end;
 
