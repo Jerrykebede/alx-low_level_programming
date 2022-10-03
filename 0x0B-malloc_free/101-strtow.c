@@ -34,7 +34,7 @@ int wordnos(char *s)
  * Return: pointer to an array of strings (success)
  * or NULL (Error)
  */
-char strtow(char *str)
+char **strtow(char *str)
 {
 	char **matrix, *tmp;
 	int i, k = 0, len = 0, words, c = 0, start, end;
@@ -60,7 +60,8 @@ char strtow(char *str)
 				if (tmp == NULL)
 					return (NULL);
 				while (start < end)
-					*tmp = '\0';
+					*tmp++ = str[strat++];
+				*tmp = '\0';
 				matrix[k] = tmp - c;
 				k++;
 				c = 0;
