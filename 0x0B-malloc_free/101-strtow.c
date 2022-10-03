@@ -29,7 +29,7 @@ char **wordnos(char *s)
 
 /**
  * strtow - splits a string into words
- * @str: string to split 
+ * @str: string to split
  *
  * Return: pointer to an array of strings (success)
  * or NULL (Error)
@@ -63,7 +63,7 @@ char **strtow(char *str)
 					*tmp = '\0';
 				matrix[k] = tmp - c;
 				k++;
-				c =0;
+				c = 0;
 			}
 		}
 		else if (c++ == 0)
