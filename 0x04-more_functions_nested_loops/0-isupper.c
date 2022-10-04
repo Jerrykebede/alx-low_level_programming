@@ -1,7 +1,7 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * _isupper - checks for uppercase letters
+ * _isupper - checks for uppercase letter
  * @c: parametr to be printed 
  * Return: 0 or 1 depending on the condition
  */
