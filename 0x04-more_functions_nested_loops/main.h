@@ -1,5 +1,7 @@
-#ifndef MAIN_H  
-#define MAIN_H
+#ifndef MAIN_H_INCLUDED  
+#define MAIN_H_INCLUDED
+
+#include <stdio.h>
 
 int _putchar(char c);                                                           
 int _isupper(int c); 
@@ -14,4 +16,4 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 
-#endif /* MAIN_H */
+#endif
