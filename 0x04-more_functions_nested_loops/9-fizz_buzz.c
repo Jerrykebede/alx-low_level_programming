@@ -1,35 +1,28 @@
+#include "main.h"
 #include <stdio.h>
-
-/**
- * main -program the prints either number
- * or fizz or buzz or fizzBuzz
- *
- *
- * Return: returns 0
- */
-
+/** 
+* main - Entry point
+* Return: Alwas 0
+*/
 int main(void)
 {
-	int num = 1;
+	int i;
 
-	while (num++ < 100)
+	for (i = 1; i <= 100; i++)
 	{
-		if ((num % 3 == 0) && (num % 5 == 0))
+		if (i % 3 == 0 && i % 5 != 0)
 		{
-			printf("FizzBuzz ");
+			printf(" Fizz");
 		}
-		else if ((num % 3) == 0)
+		else if (i % 5 == 0 && i % 5 == 0)
 		{
-			print("Fizz ");
+			printf(" FizzBuzz");
 		}
-		else if ((num % 5) == 0)
+		else if (i == 1)
 		{
-			if (num != 100)
-			{
-				print("Buzz ");
-			}
-			else
-			{
-				putchar('\n');
-			}
+			printf("%d", i);
 		}
+	}
+	printf("\n");
+	return (0);
+}
