@@ -1,17 +1,16 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * print_line -prints a sraight line
- * @n: parameer
- * Return: returns nothing
+ * print_line - lines
+ * @n: number of lines to be printed
+ * Return: 0
  */
-
 void print_line(int n)
 {
-	while (n-- > 0)
+	int count = n, i;
+
+	for (i = 0; i < count; i++)
 	{
-		putchar('_');
+		_putchar('_');
 	}
-	putchar('\n');
+	_putchar('\n');
 }
