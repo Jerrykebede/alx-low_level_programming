@@ -1,12 +1,13 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * mul - multiples two numbers
- * @a: first number
- * @b: second number
- * Return: returns result
+ * @a: The  first number to multiply
+ * @b: The  second number to multiply wit first number
+ *
+ * Return: The result of multiplication between x param and y param
  */
-
 int mul(int a, int b)
 {
 	return (a * b);
