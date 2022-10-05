@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*print_number - print integer numbers
-*@n: number
-*Return: 0
-*/
+ * print_number - print intefer numbers
+ * @n: number
+ * Return: 0
+ */
 void print_number(int n)
 {
 	unsigned int num = n;
