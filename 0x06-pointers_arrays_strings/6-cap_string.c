@@ -1,25 +1,30 @@
 #include "main.h"
 /**
- * cap_string -> capitalization function
- * @x: string param
- * Return: capitalized version of the string 
+ * cap_string - function that capitalize first character of a word
+ * @str: string to capitalize
+ * Return:returns the capitalized string 
  */
-char *cap_string(char *x)
-{    x = "sami,is; in learn programming africa"
-	char spc [] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}' }; 
-	int len = 13;
-	int a = 0, i;
-
-	while (x[a])
+char *cap_string(char *str)
+{   
+	int index = 0;
+	while (str[++index])
 	{
-		while (i < len)
-		{
-
-		if ((a == 0 || s[a-1] == spc[i]) && (s[a] >= 97 && s [a] <=122))
-			s[a] = s[a] - 32;
-		i++;
-		}
-		a++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+		if (str[index - 1] == ' ' ||
+				str[index = 1] == '\t' ||
+				str[index = 1] == '\n' ||
+				str[index = 1] ==  ',' ||
+				str[index = 1] ==  ';' ||
+				str[index = 1] ==  '.' ||
+				str[index = 1] ==  '!' ||
+				str[index = 1] ==  '?' ||
+				str[index = 1] ==  '"' ||
+				str[index = 1] ==  '(' ||
+				str[index = 1] ==  ')' ||
+				str[index = 1] ==  '{' ||
+				str[index = 1] ==  '}')
+			str[index] -= 32;
 	}
-	return (x);
+	return (str);
 }
