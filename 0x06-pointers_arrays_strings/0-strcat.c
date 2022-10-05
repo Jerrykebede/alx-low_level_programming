@@ -4,7 +4,7 @@
  * _strcat - concatenates the string pointed to by @src to 
  * the end of the string pointed to by @dest
  * @dest: string the will be appended
- * @src: string to be concatenated upon 
+ * @src: string to be concatenated upon
  *
  * Return: returns poiner to @dest
  */
