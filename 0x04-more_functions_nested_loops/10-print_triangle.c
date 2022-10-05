@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *print_triangle - prints a triangle
+ *print_triangle - prints triangl
  *@size: numbers of triangle to print
  *Return: 0
  */
@@ -21,7 +21,7 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			for (hash = 1; has <= row; hash++)
+			for (hash = 1; hash <= row; hash++)
 			{
 				_putchar('#');
 			}
