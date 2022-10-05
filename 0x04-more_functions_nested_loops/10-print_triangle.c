@@ -6,7 +6,7 @@
  */
 void print_triangle(int size)
 {
-	int row, coiumns, hash;
+	int row, columns, hash;
 
 
 	if (size <= 0)
