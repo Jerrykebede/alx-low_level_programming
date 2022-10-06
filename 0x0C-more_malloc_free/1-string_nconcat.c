@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdlib.h>
 #include "main.h"
 /**
  * _strlen - claculate and return string length 
