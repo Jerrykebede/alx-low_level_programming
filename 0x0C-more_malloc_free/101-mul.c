@@ -23,11 +23,11 @@ int find_len(char *str)
 }
 
 /**
- * create_xarray - crates an array of chars and initializes it with 
- * the character 'x'. Addis a terminating null byte.
+ * create_xarray - crates an array of chars and initializes it wit 
+ *the character 'x'. Addis a terminating null byte.
  * @size: The size of the array to be initialized.
  *
- * Description: If there is insufficient space, the 
+ *Description: If there is insufficient space, the 
  * function exits with a status of 98.
  * Return: A pointer to the array.
  */
@@ -51,8 +51,8 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeroes - Iterates through a string of numbers containing 
- * leading zeroes until it hits a non -zero number.
+ * iterate_zeroes - Iterates through a string of numbers containing
+ *leading zeroes until it hits a non -zero number.
  * @str: The string of numbers to be iterate through.
  *
  * Return: A pointer to the next non-zero element.
@@ -89,11 +89,11 @@ int get_digit(char c)
  * get_prod - Multiplies a string of numbers by a single digit.
  * @prod: The buffer to store the result.
  * @mult: The string of numbers.
- * @digit: The single digit 
+ * @digit: The single digit
  * @zeroes: The necessary number of leading zeroes.
  *
  * Description: If mult contains a non-digit, the function 
- * exits with a status value of 98.
+ *exits with a status value of 98.
  */
 void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
@@ -166,7 +166,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		num = (*next_prod - '0');
 		num + = tens;
 		*final_prod = (num % 10) + '0';
-		tens = num /10;
+		tens = num / 10;
 
 		final_prod--;
 		next_prod--;
