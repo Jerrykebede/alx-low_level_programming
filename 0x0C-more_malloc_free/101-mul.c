@@ -23,10 +23,12 @@ int find_len(char *str)
 }
 
 /**
- * create_xarray - crates an array of chars and initializes it with the character 'x'. Addis a terminating null byte.
+ * create_xarray - crates an array of chars and initializes it with 
+ * the character 'x'. Addis a terminating null byte.
  * @size: The size of the array to be initialized.
  *
- * Description: If there is insufficient space, the function exits with a status of 98.
+ * Description: If there is insufficient space, the 
+ * function exits with a status of 98.
  * Return: A pointer to the array.
  */
 char *create_xarray(int size)
@@ -34,7 +36,7 @@ char *create_xarray(int size)
 	char *array;
 	int index;
 
-	array = malloc(sizeof(char) *size);
+	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
 		exit(98);
@@ -49,7 +51,8 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeroes - Iterates through a string of numbers containing leading zeroes until it hits a non -zero number.
+ * iterate_zeroes - Iterates through a string of numbers containing 
+ * leading zeroes until it hits a non -zero number.
  * @str: The string of numbers to be iterate through.
  *
  * Return: A pointer to the next non-zero element.
@@ -89,7 +92,8 @@ int get_digit(char c)
  * @digit: The single digit 
  * @zeroes: The necessary number of leading zeroes.
  *
- * Description: If mult contains a non-digit, the function exits with a status value of 98.
+ * Description: If mult contains a non-digit, the function 
+ * exits with a status value of 98.
  */
 void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
@@ -160,7 +164,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
 	{
 		num = (*next_prod - '0');
-		num += tens;
+		num + = tens;
 		*final_prod = (num % 10) + '0';
 		tens = num /10;
 
@@ -175,7 +179,8 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * @argv: The number of arguments passed to the program.
  * @argc: An array of pointers to the arguments.
  *
- * Description If the number of arguments is incorect or one nmber contains non-digits, the function exits with a status of 98.
+ * Description If the number of arguments is incorect or one nmber 
+ * contains non-digits, the function exits with a status of 98.
  * Return: Alwas 0.
  */
 int main(int argc, char *argv[])
@@ -188,11 +193,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+
 	if (*(argv[1]) == '0')
 		argv[1] = iterate_zeroes(argv[1]);
 	if(*(argv[2]) == '0')
-		argv[2] iterate_zeroes(argv[2]);
-	if(*argv[1]) == '\0' || *(argv[2]) == '\0')
+		argv[2] = iterate_zeroes(argv[2]);
+	if(*(argv[1]) == '\0' || *(argv[2]) == '\0')
 	{
 		printf("0\n");
 		return (0);
