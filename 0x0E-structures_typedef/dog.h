@@ -7,7 +7,7 @@
  * @age: Second member
  * @owner: Third memeber
  * Description: List all dogs details in one struct
- * */
+ */
 struct dog
 {
 	char *name;
