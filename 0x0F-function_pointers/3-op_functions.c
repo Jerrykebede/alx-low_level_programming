@@ -4,7 +4,7 @@
  * @a: integer.
  * @b: integer.
  *
- * Return: sum
+ * Return: sum.
  */
 int op_add(int a, int b)
 {
@@ -24,7 +24,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * @p_mul - returns product of two numbers.
+ * op_mul - returns product of two numbers.
  * @a: integer.
  * @b: integer.
  *
@@ -50,5 +50,22 @@ int op_div(int a, int b)
 		exit(100);
 	}
 	return (a / b);
+}
+
+/**
+ * op_mod - returns the remainder of division.
+ * @a: integer.
+ * @b: ingeger.
+ *
+ * Return: remainder.
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
 
