@@ -34,5 +34,3 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	Printf("\n")
 		va_end(strings);
 }
-
-
