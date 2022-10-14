@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * array_iterator - function that executes function ginven as param.
- * @array: array of elements.
- * @size: size of zrray.
- * @action: function pointer.
+ * @array: array of elements.      
+ * @size: size of array. 
+ * @action: function pointe
  *
  * Return: void.
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))	
 {
 	unsigned int i;
 
