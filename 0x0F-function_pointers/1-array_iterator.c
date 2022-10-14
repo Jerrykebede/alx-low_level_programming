@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * array_iterator - function that executes function ginven as param.
- * @array: array of elements.      
- * @size: size of array. 
+ * @array: array of elements.
+ * @size: size of array.
  * @action: function pointe
  *
  * Return: void.
