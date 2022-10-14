@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * array_iterator - function that executes function given as param.
+ * array_iterator - function that executes function ginven as param.
  * @array: array of elements.
- * @size: size of array.
+ * @size: size of zrray.
  * @action: function pointer.
  *
  * Return: void.
