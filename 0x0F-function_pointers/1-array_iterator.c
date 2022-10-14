@@ -3,7 +3,7 @@
  * array_iterator - function that executes function ginven as param.
  * @array: array of elements.
  * @size: size of array.
- * @action: function pointe
+ * @action: function pointer.
  *
  * Return: void.
  */
