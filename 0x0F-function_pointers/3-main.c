@@ -1,6 +1,6 @@
-#incude "3-calc.h"
+#include "3-calc.h"
 /**
- * main -check arguments
+ * main - check arguments
  * @argc: argument count
  * @argv: argument vector.
  *
