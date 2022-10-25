@@ -23,7 +23,7 @@ listint_t *find_listint_loop(listint_t *head)
 			tortoise = head;
 			while (tortoise != hare)
 			{
-				tortoise = tortise->next;
+				tortoise = tortoise->next;
 				hare = hare->next;
 			}
 			return (tortoise);
