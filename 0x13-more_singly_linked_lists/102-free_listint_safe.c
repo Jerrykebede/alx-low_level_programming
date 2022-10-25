@@ -45,7 +45,7 @@ size_t looped_listint_count(listint_t *head)
 
 /*
  * free_listint_safe - Frees a listint_t list safely (ie.
- * can free lists containing loops)
+ * canfree lists containing loops)
  * @h: A pointer to the address of
  * the head of the listint_t list.
  *
