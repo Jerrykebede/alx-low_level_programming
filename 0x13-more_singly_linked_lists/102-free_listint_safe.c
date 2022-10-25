@@ -31,41 +31,29 @@ void free_listp2(listp_t **head)
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t nodes = 0;
-	listp_t *hptr, *new, *add;
-	listint_t *curr;
+	listint_t *tmp;
+	size_t nodes, index;
 
-	hptr = NULL;
-	while (*h != NULL)
+	nodes = looped_listint_count(*h);
+	if (nodes == 0)
 	{
-		new = malloc(sizeof(listp_t));
-
-		if (new == NULL)
-			exit(98);
-
-		new->p = (void *)*h;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
+		for (; h != NULL && *h != NULL; nodes++)
 		{
-			add = add->next;
-			if (*h == add->p)
-			{
-				*h = NULL;
-				free_listp2(&hptr);
-				return (nodes);
-			}
+			tmp = (*h)->next;
+			free(*h);
+			*h = tmp;
 		}
-
-		curr = *h;
-		*h = (*h)->next;
-		free(curr);
-		nnodes++;
 	}
-	*h = NULL;
-	free_listp2(&hptr);
+	else
+	{
+		for (index = 0; index < nodes; index++)
+		{
+			tmp = (*h)->next;
+			free(*h);
+			*h = tmp;
+		}
+		*h = NULL;
+	}
+	h = NULL;
 	return (nodes);
 }
