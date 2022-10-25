@@ -6,7 +6,7 @@
  *
  * Return: no return.
  */
-void free_listp2(listp_t **head)
+size_t looped_listint_count(listint_t *head)
 {
 	listp_t *temp;
 	listp_t *curr;
