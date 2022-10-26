@@ -1,5 +1,5 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
 int _putchar(char C);
 
@@ -17,7 +17,7 @@ char *_strstr(char *haystack, char *needle);
 
 void print_chessboard(char (*a)[8]);
 
-void set_string(char **s, char *to); 
+void set_string(char **s, char *to);
 
 void print_diagsums(int *a, int size);
 
