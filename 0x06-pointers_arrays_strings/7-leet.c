@@ -11,7 +11,7 @@ char *leet(char *x)
 	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
 	char trw[5] = {'4', '3', '0', '7', '1'};
 
-	while (x[z])
+	while (x[a])
 	{
 		b = 0;
 		while (b < l)
