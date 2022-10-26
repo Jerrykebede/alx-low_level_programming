@@ -1,5 +1,4 @@
 #include "main.h"
-void print_uint(unsigned int n);
 /**
  * print_number - Prints an integer
  * @n: The integer to print
