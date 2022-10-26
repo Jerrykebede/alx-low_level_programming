@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 int _putchar(char C);
 
 char *memset(char *s, char b, unsigned int n);
