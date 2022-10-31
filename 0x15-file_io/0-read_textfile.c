@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 
-	ssize_t lenr lenw;
+	ssize_t lenr, lenw;
 	char *buffer;
 
 	if (filename == NULL)
@@ -37,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	lenw = write(STDOUT_FILENO, uffer, lenr);
+	lenw = write(STDOUT_FILENO, buffer, lenr);
 	free(buffer);
 	if (lenr != lenw)
 		return (0);
