@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void check_elf(unsigned char *e_ident);
@@ -29,9 +30,9 @@ void check_elf(unsigned char *e_ident)
 	for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
-				e_ident[index] != "E" &&
-				e_ident[index] != "L" &&
-				e_ident[index] != "F")
+				e_ident[index] != 'E' &&
+				e_ident[index] != 'L' &&
+				e_ident[index] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -85,8 +86,8 @@ void print_class(unsigned char *e_ident)
 }
 
 /**
- * print_daa - prints the data of an ELF header.
- * @e_ident: A pointer to and array containing the ELF class.
+ * print_data - prints the data of an ELF header.
+ * @e_ident: A pointer to an array containing the ELF class.
  */
 void print_data(unsigned char *e_ident)
 {
@@ -181,6 +182,7 @@ void print_abi(unsigned char *e_ident)
 	printf(" ABI Version: %d\n",
 			e_ident[EI_ABIVERSION]);
 }
+
 /**
  * print_type - prints the type of an ELF header.
  * @e_type: The ELF type.
@@ -194,7 +196,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("NONE (none)\n");
+			printf("NONE (None)\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
@@ -223,8 +225,8 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	printf(" Entry point address: ");
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
-		e_entry = ((e_entry << 8) & 0XFF00FF00) |
-			((e_entry >> 8) & 0XFF00FF);
+		e_entry = ((e_entry << 8) & 0xFF00FF00) |
+			((e_entry >> 8) & 0xFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
 	}
 
@@ -263,7 +265,7 @@ void close_elf(int elf)
  * Description: If the file is not an ELF File or
  * the function fails - exit code 98.
  */
-int main(int __attribute__((__unsed__)) argc, char *argv[])
+int main(int _attribute_((_unsed_)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int o, r;
@@ -285,8 +287,8 @@ int main(int __attribute__((__unsed__)) argc, char *argv[])
 	if (r == -1)
 	{
 		free(header);
-		close_elf(0);
-		dprintf(STDERR_FILENO, "Error: '%': No such file\n", argv[1]);
+		close_elf(o);
+		dprintf(STDERR_FILENO, "Error: '%s': No such file\n", argv[1]);
 		exit(98);
 	}
 
@@ -302,6 +304,6 @@ int main(int __attribute__((__unsed__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(o)
-		return (0);
-}	
+	close_elf(o);
+	return (0);
+}
