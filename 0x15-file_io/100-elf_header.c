@@ -63,7 +63,6 @@ void print_magic(unsigned char *e_ident)
 
 /**
  * print_class - prints the class of an ELF header.
- * Print_class - Prints the class of an ELF header.
  * @e_ident: A pointer to an array containing the ELF class.
  */
 void print_class(unsigned char *e_ident)
@@ -140,7 +139,7 @@ void print_osabi(unsigned char *e_ident)
 	switch (e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE:
-			printf("UNIX -System V\n");
+			printf("UNIX - System V\n");
 			break;
 		case ELFOSABI_HPUX:
 			printf("UNIX - HP-UX\n");
@@ -171,8 +170,7 @@ void print_osabi(unsigned char *e_ident)
 			break;
 		default:
 			printf("<unknown: %x>\n", e_ident[EI_OSABI]);
-	}
-}
+					
 
 /**
  * print_abi -prints the ABI version of an ELF header.
@@ -226,8 +224,8 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	printf(" Entry point address: ");
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
-		e_entry = ((e_entry << 8) & 0xFF00FF00) |
-			((e_entry >> 8) & 0xFF00FF);
+		e_entry = ((e_entry << 8) & 0XFF00FF00) |
+			((e_entry >> 8) & 0XFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
 	}
 
@@ -251,7 +249,7 @@ void close_elf(int elf)
 	{
 		dprintf(STDERR_FILENO,
 				"Error: can't close fd %d\n", elf);
-		exit(98)
+		exit(98);
 	}
 }
 
