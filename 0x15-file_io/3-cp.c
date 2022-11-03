@@ -7,9 +7,9 @@ void close_file(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
+ * @file: The name of the file buffer is storing chars for
  *
- * Return: A pointer to the newly-allocate buffer.
+ * Return: pointer to the newly-allocated buffer.
  */
 
 char *create_buffer(char *file)
@@ -29,7 +29,7 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file(int fd)
+ * close_file - Closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
@@ -40,13 +40,13 @@ void close_file(int fd)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 
 /**
- * main -copies the contents of a file to another file.
+ * main - copies the contents of a file to another file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDER_FILENO, "usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "usage: cp file_from file_to\n");
 		exit(97);
 	}
 
