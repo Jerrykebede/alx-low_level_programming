@@ -21,4 +21,4 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 
 
-#endif /* MAIN_H 
+#endif /* MAIN_H */
