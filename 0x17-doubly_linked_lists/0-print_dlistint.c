@@ -1,19 +1,25 @@
 #include "lists.h"
 
 /**
- * print_dlistint - Print all the elements in the list.
- * @h: head of the list.
- * Return: Number of nodes.
+ * print_dlistint - function that prints a list
+ * @h: pointer to list to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int counter = 0;
+	int nodes = 0;
 
+	if (h == NULL)
+	{
+		return (nodes);
+	}
 	while (h != NULL)
 	{
-		printf("%d\n", h->n);
+		printf("%i\n", h->n);
 		h = h->next;
-		counter++;
+		nodes++;
 	}
-	return (counter);
+	return (nodes);
 }
